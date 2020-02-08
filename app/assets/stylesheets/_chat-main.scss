@@ -47,7 +47,29 @@
     padding: 46px 40px;
     height: calc(100vh - 190px);
     overflow: scroll;
-    
+    .message {
+      .upper-message {
+        display: flex;
+        &__user-name {
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .lower-message {
+        margin-top: 10px;
+        &__content {
+          color: #434a54;
+          font-size: 14px;
+          margin-bottom: 40px;
+        }
+      }
+    }
   }
   
   .form{
@@ -57,22 +79,23 @@
     display: flex;
     position: relative;
     width: 100%;
-    .form__mask{
+    .new_message{
       width: 100%;
       position: relative;
-    .form__input{
+    .form__message{
       height: 50px;
       width: calc(100% - 120px);
       color: #434a54;
       border-style: none;
       padding: 0 40px 0 10px;
       }
-    .image{
+    .form__mask__image{
       position: absolute;
       top: 10px;
       right: 10px;
       cursor: pointer;
       font-size: 1.3rem;
+      position: absolute;
       top: 10;
       right: 130px;
       .file{
@@ -92,6 +115,5 @@
       position: absolute;
       top: 0;
       right: 0;
-      line-height: 50px;
     }
 }
